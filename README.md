@@ -6,6 +6,8 @@ The application is down. The database crashed. And the culprit? A massive, unwie
 
 In my role overseeing cloud architectures at Zealous System, I’ve seen this exact scenario play out across countless infrastructures. PM2 is phenomenal for process management, but its default logging behavior will eventually eat your server's disk space alive if left unchecked. Instead of manually clearing out log files in a panic during an outage, you can automate the entire lifecycle using the `pm2-logrotate` module.
 
+![Let's install PM2 Logrotate](./pm2_log_rotation_1.png)
+
 Below, we’ll explore the precise configuration I deploy to safeguard production workloads from sudden storage outages—keeping system architecture robust and overhead costs predictably low.
 
 ### How to Automate and Configure PM2 Log Rotation
@@ -85,3 +87,5 @@ Cloud storage is optimized for performance, not for hoarding raw text. If you ar
 Consider a moderately trafficked API that generates 10GB of logs per day (300GB per month). Without log rotation, your PM2 logs accumulate linearly. By month 12, you are paying to store 3.6 Terabytes of completely useless, stale text data on premium solid-state drives.
 
 Implementing the configuration above changes the financial math entirely. By retaining only 30 days of logs and enabling gzip compression (which typically reduces raw JSON or text log sizes by 85% to 90%), you cap your storage ceiling. Instead of paying for exponential growth, your log storage costs become a flat, predictable line item.
+
+![AWS Cost Optimization Graph](./pm2_log_rotation_2.png)
