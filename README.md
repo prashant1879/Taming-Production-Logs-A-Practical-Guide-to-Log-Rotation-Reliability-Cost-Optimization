@@ -1,5 +1,3 @@
----
-
 # Taming Node.js Logs in Production: A Principal Architect’s Guide to PM2 Log Rotation
 
 *By Prashant Suthar, Principal Solutions Architect – AI & Cloud at Zealous System*
