@@ -1,6 +1,4 @@
-# Taming Node.js Logs in Production: A Principal Architect’s Guide to PM2 Log Rotation
-
-*By Prashant Suthar, Principal Solutions Architect – AI & Cloud at Zealous System*
+### Taming Node.js Logs in Production: A Principal Architect’s Guide to PM2 Log Rotation
 
 It happens to the best of us. You deploy a flawless Node.js application, monitor it for a few days, and everything looks golden. The CPU usage is flat, memory is stable, and response times are lightning-fast. Fast forward six months, and you get a pager alert at 3 AM: *No space left on device*.
 
